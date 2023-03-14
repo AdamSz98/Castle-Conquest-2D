@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 1113657356}
   - component: {fileID: 1113657355}
   - component: {fileID: 1113657354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4018,10 +4018,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 251817541, guid: 47690079ff887f948a0f7153b9c1ad65, type: 3}
-      propertyPath: jumpSpeed
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 1333441120754167206, guid: 47690079ff887f948a0f7153b9c1ad65, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4070,5 +4066,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1806072598340628475, guid: 47690079ff887f948a0f7153b9c1ad65, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 45748ce1d1de93b4885e355fb93a85f5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47690079ff887f948a0f7153b9c1ad65, type: 3}
