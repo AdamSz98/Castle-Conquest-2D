@@ -15,8 +15,8 @@ TagManager:
   - 
   - Ground
   - Climbing
-  - 
-  - 
+  - Player
+  - World Confiner
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: World Confiner
+    uniqueID: 2768292159
     locked: 0
   - name: Background
     uniqueID: 2738905325
