@@ -42,6 +42,18 @@ public class Player : MonoBehaviour
         if (myBoxCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
             PlayerHit();
         }
+
+        ExitLevel();
+    }
+
+    private void ExitLevel()
+    {
+        if (!myBoxCollider2D.IsTouchingLayers(LayerMask.GetMask("Interactable"))) { return; }
+
+        if (CrossPlatformInputManager.GetButtonDown("Vertical")) 
+        {
+            FindObjectOfType<ExitDoor>().StartLoadingNextLevel();
+        }
     }
 
     private void Attack()
