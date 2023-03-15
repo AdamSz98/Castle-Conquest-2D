@@ -172,6 +172,7 @@ MonoBehaviour:
   runSpeed: 10
   jumpSpeed: 35
   climbingSpeed: 8
+  attackRadius: 1.02
   hitKick: {x: 50, y: 10}
   hurtBox: {fileID: 1004501151895806783}
 --- !u!60 &1806072598340628475
@@ -230,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3802087481673766378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.64000034, y: -0.4300003, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
