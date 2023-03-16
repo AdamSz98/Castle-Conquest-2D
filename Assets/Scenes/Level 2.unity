@@ -498,7 +498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.157875, y: 0.8198008, z: -10}
+  m_LocalPosition: {x: -6.3478394, y: 0.81956667, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,9 +1036,9 @@ GameObject:
   - component: {fileID: 1113657351}
   - component: {fileID: 1113657353}
   - component: {fileID: 1113657352}
-  - component: {fileID: 1113657356}
   - component: {fileID: 1113657355}
   - component: {fileID: 1113657354}
+  - component: {fileID: 1113657356}
   m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
@@ -1100,7 +1100,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 126554111
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -2915,9 +2915,9 @@ CompositeCollider2D:
       - X: 220000000
         Y: 100000000
       - X: 220000000
-        Y: -30000000
+        Y: -40000000
       - X: 160000000
-        Y: -30000000
+        Y: -40000000
       - X: 160000000
         Y: -20000000
       - X: 110000000
@@ -2944,7 +2944,11 @@ CompositeCollider2D:
       - {x: 0.9999706, y: 5}
       - {x: -11, y: 4.999971}
       - {x: -10.99997, y: -5}
-    - - {x: 11, y: -3.9999704}
+    - - {x: 22, y: -3.9999704}
+      - {x: 16, y: -3.9999704}
+      - {x: 15.999971, y: -2}
+      - {x: 11, y: -2.0000293}
+      - {x: 10.99997, y: -4}
       - {x: 8, y: -3.9999704}
       - {x: 7.9999704, y: -2}
       - {x: 6, y: -2.0000293}
@@ -2972,10 +2976,6 @@ CompositeCollider2D:
       - {x: 2, y: 6.0000296}
       - {x: 2.0000293, y: 10}
       - {x: 22, y: 9.99997}
-      - {x: 21.999971, y: -3}
-      - {x: 16, y: -2.9999707}
-      - {x: 15.999971, y: -2}
-      - {x: 11, y: -2.0000293}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1113657355
