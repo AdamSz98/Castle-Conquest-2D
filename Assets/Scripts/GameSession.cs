@@ -10,6 +10,7 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3, score = 0;
     [SerializeField] TMP_Text scoreText, livesText;
+    [SerializeField] Image[] hearts;
     private void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -39,6 +40,14 @@ public class GameSession : MonoBehaviour
     public void Heal()
     {
         playerLives++;
+
+        if(playerLives >= 3)
+        {
+            playerLives = 3;
+        }
+
+        UpdateHearts();
+
         livesText.text = playerLives.ToString();
     }
 
@@ -57,7 +66,23 @@ public class GameSession : MonoBehaviour
     private void TakeLife()
     {
         playerLives--;
+        UpdateHearts();
         livesText.text = playerLives.ToString();
+    }
+
+    private void UpdateHearts()
+    {
+        for(int i = 0; i < hearts.Length; i++)
+        {
+            if (i < playerLives)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
 
     private void ResetGame()
