@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eec6d88872bf79429d06b4a78c02d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diamondPickupSFX: {fileID: 8300000, guid: ebd677d02f27ceb4a95342048d21c901, type: 3}
 --- !u!60 &4195020536867162382
 PolygonCollider2D:
   m_ObjectHideFlags: 0
