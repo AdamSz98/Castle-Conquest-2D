@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     PolygonCollider2D myPlayersFeet;
 
     float startingGravityScale;
+    bool isHurting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +38,17 @@ public class Player : MonoBehaviour
         Run();
         Jump();
         Climb();
-        Attack();
-
-        if (myBoxCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
-            PlayerHit();
-        }
-
         ExitLevel();
+
+        if (!isHurting)
+        {
+            Attack();
+
+            if (myBoxCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+            {
+                PlayerHit();
+            }
+        }
     }
 
     private void ExitLevel()
@@ -75,6 +80,17 @@ public class Player : MonoBehaviour
         myRigidBody2D.velocity = hitKick * new Vector2(-transform.localScale.x, 1f);
 
         myAnimator.SetTrigger("GettingHit");
+        isHurting = true;
+
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        StartCoroutine(StopHurting());
+    }
+
+    IEnumerator StopHurting()
+    {
+        yield return new WaitForSeconds(2f);
+
+        isHurting = false;
     }
 
     private void Climb()
