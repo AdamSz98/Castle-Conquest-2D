@@ -8,12 +8,17 @@ public class ExitDoor : MonoBehaviour
     [SerializeField] float secondsToLoad = 2f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<Animator>().SetTrigger("Open");
+        GetComponent<Animator>().SetBool("Open", true);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        GetComponent<Animator>().SetBool("Open", false);
     }
 
     public void StartLoadingNextLevel()
     {
-        GetComponent<Animator>().SetTrigger("Close");
+        GetComponent<Animator>().SetBool("Open", false);
 
         StartCoroutine(LoadNextLevel());
     }
