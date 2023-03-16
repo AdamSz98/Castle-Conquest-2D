@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnterDoor : MonoBehaviour
 {
+    [SerializeField] AudioClip openingDoorSFX, closingDoorSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,11 @@ public class EnterDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetComponent<Animator>().SetBool("Open", false);
+        AudioSource.PlayClipAtPoint(closingDoorSFX, Camera.main.transform.position);
+    }
+
+    private void PlayOpeningDoorSFX()
+    {
+        AudioSource.PlayClipAtPoint(openingDoorSFX, Camera.main.transform.position);
     }
 }

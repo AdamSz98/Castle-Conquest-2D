@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48e8653b95e9524f9571a5dd74b8010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoorSFX: {fileID: 8300000, guid: 1793940cd0480c14a9d4fb0addb30099, type: 3}
+  closingDoorSFX: {fileID: 8300000, guid: 208dd76bcf51d2a46bb224562fb9eead, type: 3}
   secondsToLoad: 0.5
 --- !u!61 &3795968097914566930
 BoxCollider2D:

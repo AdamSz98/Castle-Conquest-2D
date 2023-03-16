@@ -6,6 +6,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float enemyRunSpeed = 5f;
+
+    [SerializeField] AudioClip dyingSFX;
+
     bool isDead = false;
 
     Rigidbody2D enemyRigidBody;
@@ -69,5 +72,10 @@ public class Enemy : MonoBehaviour
     private bool IsFacingLeft()
     {
         return transform.localScale.x > 0;
+    }
+
+    void EnemyDyingSFX()
+    {
+        AudioSource.PlayClipAtPoint(dyingSFX, Camera.main.transform.position);
     }
 }

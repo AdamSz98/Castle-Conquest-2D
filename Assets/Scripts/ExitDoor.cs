@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoor : MonoBehaviour
 {
+    [SerializeField] AudioClip openingDoorSFX, closingDoorSFX;
     [SerializeField] float secondsToLoad = 0.5f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,7 @@ public class ExitDoor : MonoBehaviour
     public void StartLoadingNextLevel()
     {
         GetComponent<Animator>().SetBool("Open", false);
+        AudioSource.PlayClipAtPoint(closingDoorSFX, Camera.main.transform.position);
 
         StartCoroutine(LoadNextLevel());
     }
@@ -29,5 +31,10 @@ public class ExitDoor : MonoBehaviour
 
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    private void PlayOpeningDoorSFX()
+    {
+        AudioSource.PlayClipAtPoint(openingDoorSFX, Camera.main.transform.position);
     }
 }
